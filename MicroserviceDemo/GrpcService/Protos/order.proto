@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package order;
+
+service OrderService {
+    rpc PlaceOrder (MultiProductOrderRequest) returns (OrderResponse);
+    rpc UpdateOrder(MultiProductUpdateRequest) returns (OrderResponse);
+    rpc GetProductList(Empty) returns (ProductListResponse);
+}
+
+message MultiProductOrderRequest {
+  repeated ProductSelection productSelections = 1;
+}
+
+message ProductSelection {
+  int32 productId = 1;
+  int32 quantity = 2;
+}
+
+message MultiProductUpdateRequest {
+  repeated ProductUpdate productUpdates = 1;
+}
+
+message ProductUpdate {
+  int32 productId = 1;
+  int32 quantity = 2;
+}
+
+message OrderResponse {
+    int32 orderId = 1;
+    int32 productId = 2;
+    string productName = 3;
+    int32 quantity = 4;
+    string message = 5; 
+}
+
+message Empty {}
+
+message Product {
+    int32 productId = 1;
+    string productName = 2;
+    string description = 4;
+    float price = 5;
+    string manufacturer = 6;
+    int32 quantity = 7;
+}
+
+message ProductListResponse {
+  repeated Product products = 1;
+}
