@@ -1,0 +1,42 @@
+[
+  {
+    "ProductId": 1,
+    "ProductName": "Smart LED Bulb",
+    "Description": "Energy-efficient smart LED bulb with adjustable brightness and color temperature.",
+    "Price": 29.99,
+    "Manufacturer": "SmartHome Solutions Inc.",
+    "Quantity": 20
+  },
+  {
+    "ProductId": 2,
+    "ProductName": "Motion Sensor Switch",
+    "Description": "Wireless motion sensor switch for automatic lighting control based on movement detection.",
+    "Price": 19.99,
+    "Manufacturer": "TechInnovate Electronics",
+    "Quantity": 30
+  },
+  {
+    "ProductId": 3,
+    "ProductName": "Smart Light Switch",
+    "Description": "WiFi-enabled smart light switch compatible with voice assistants for remote control.",
+    "Price": 39.99,
+    "Manufacturer": "ConnectTech Ltd.",
+    "Quantity": 30
+  },
+  {
+    "ProductId": 4,
+    "ProductName": "Smart Plug",
+    "Description": "Smart plug for turning regular lights into smart lights; works with smartphone apps.",
+    "Price": 14.99,
+    "Manufacturer": "InnoHome Devices",
+    "Quantity": 50
+  },
+  {
+    "ProductId": 5,
+    "ProductName": "Lighting Automation Hub",
+    "Description": "Central hub for connecting and automating multiple smart lighting devices in your home.",
+    "Price": 79.99,
+    "Manufacturer": "AutomateHub Technologies",
+    "Quantity": 50
+  }
+]

@@ -1,0 +1,110 @@
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\appsettings.json
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Data\products.json
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.exe
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.deps.json
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.runtimeconfig.json
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.Common.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.AssemblyReference.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.AssemblyInfoInputs.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.AssemblyInfo.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.CoreCompileInputs.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.GrpcService.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.build.GrpcService.props
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.GrpcService.props
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.GrpcService.props
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\scopedcss\bundle\GrpcService.styles.css
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.CopyComplete
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\refint\GrpcService.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.genruntimeconfig.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\obj\Debug\net7.0\ref\GrpcService.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\appsettings.json
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Data\products.json
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.exe
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.deps.json
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.runtimeconfig.json
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.pdb
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.Common.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.AssemblyReference.cache
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.AssemblyInfoInputs.cache
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.AssemblyInfo.cs
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.CoreCompileInputs.cache
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.GrpcService.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.build.GrpcService.props
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.GrpcService.props
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.GrpcService.props
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\scopedcss\bundle\GrpcService.styles.css
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.CopyComplete
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\refint\GrpcService.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.pdb
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.genruntimeconfig.cache
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\obj\Debug\net7.0\ref\GrpcService.dll
+C:\Users\talhakhan\Downloads\Task-03-GrpcServer\Task-03-GrpcServer\MicroserviceDemo\GrpcService\bin\Debug\net7.0\products.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\appsettings.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\products.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Data\products.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.exe
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.deps.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.runtimeconfig.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\GrpcService.pdb
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Grpc.Net.Common.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.AssemblyReference.cache
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.AssemblyInfoInputs.cache
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.AssemblyInfo.cs
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.CoreCompileInputs.cache
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.GrpcService.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.build.GrpcService.props
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.GrpcService.props
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.GrpcService.props
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\scopedcss\bundle\GrpcService.styles.css
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.csproj.CopyComplete
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\refint\GrpcService.dll
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.pdb
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\GrpcService.genruntimeconfig.cache
+C:\Users\tannuverma\Desktop\MicroserviceDemo\GrpcService\obj\Debug\net7.0\ref\GrpcService.dll
