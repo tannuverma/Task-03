@@ -6,14 +6,17 @@ namespace GrpcService.Services
     public class OrderServiceImp : OrderService.OrderServiceBase
     {
         private List<Product> products;
+        string filePath;
         public OrderServiceImp()
         {
             // Read products from JSON file
-            string json = File.ReadAllText("products.json");
+            filePath = @"C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\Data\products.json";
+            string json = File.ReadAllText(filePath);
             products = JsonConvert.DeserializeObject<List<Product>>(json);
         }
         public override Task<OrderResponse> PlaceOrder(MultiProductOrderRequest request, ServerCallContext context)
         {
+            double totalPrice = 0;
             foreach (var productSelection in request.ProductSelections)
             {
                 int productId = productSelection.ProductId;
@@ -23,12 +26,15 @@ namespace GrpcService.Services
 
                 if (orderedProduct != null && orderedProduct.Quantity > 0)
                 {
-                    decimal totalPrice = (decimal)(orderedProduct.Price * quantity);
+                    totalPrice += (double)(orderedProduct.Price * quantity);
                 }
 
             }
+            OrderResponse response = new OrderResponse();
+            response.TotalPrice = totalPrice;
+            response.Message = "Order Placed Successfully";
 
-            return Task.FromResult(new OrderResponse { Message = "Order placed successfully" });
+            return Task.FromResult(response);
         }
 
         public override Task<ProductListResponse> GetProductList(Empty request, ServerCallContext context)
@@ -60,7 +66,7 @@ namespace GrpcService.Services
         {
             // Serialize the list of products back to JSON and save it to the file
             string json = JsonConvert.SerializeObject(products, Formatting.Indented);
-            File.WriteAllText("products.json", json);
+            File.WriteAllText(filePath, json);
         }
     }
 }

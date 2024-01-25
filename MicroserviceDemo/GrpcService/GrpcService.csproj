@@ -16,4 +16,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties data_4products_1json__JsonSchema="https://cdn.jsdelivr.net/npm/tsup/schema.json" /></VisualStudio></ProjectExtensions>
+
 </Project>
