@@ -61,6 +61,13 @@ namespace GrpcClient
                                     string[] parts = input.Split(',');
                                     if (parts.Length == 2 && int.TryParse(parts[0], out int itemId) && int.TryParse(parts[1], out int quantity))
                                     {
+
+                                        if (productSelections.Any(p => p.ProductId == itemId))
+                                        {
+                                            Console.WriteLine("Item already added. Please enter a different itemId.");
+                                            continue;  // Restart the loop
+                                        }
+
                                         Product selectedProduct = productListResponse.Products.FirstOrDefault(p => p.ProductId == itemId);
 
                                         if (selectedProduct != null && selectedProduct.Quantity >= quantity)
@@ -82,11 +89,11 @@ namespace GrpcClient
                                     Console.Write("Do you want to add any other product? ");
                                     string moreInputs = Console.ReadLine();
 
-                                    if (!(moreInputs.Trim().ToLower() == "y" || moreInputs.Trim().ToLower() == "yes"))
+                                    if (!(moreInputs.Trim().ToLower() == "y" || moreInputs.Trim().ToLower() == "yes" || moreInputs.Trim().ToLower().StartsWith("y")))
                                     {
                                         Console.Write("Do you want to place an order? ");
                                         string reply = Console.ReadLine();
-                                        if (!(reply.Trim().ToLower() == "y" || reply.Trim().ToLower() == "yes"))
+                                        if (!(reply.Trim().ToLower() == "y" || reply.Trim().ToLower() == "yes" || reply.Trim().ToLower().StartsWith("y")))
                                         {
                                             Console.Write("Do you want to add more products? ");
                                             string moreInputss = Console.ReadLine();
