@@ -7,12 +7,14 @@ namespace GrpcService.Services
     {
         private List<Product> products;
         string filePath;
-        public OrderServiceImp()
+        private readonly NotificationServiceImp _notificationService;
+        public OrderServiceImp(NotificationServiceImp notificationService)
         {
             // Read products from JSON file
             filePath = @"C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcService\Data\products.json";
             string json = File.ReadAllText(filePath);
             products = JsonConvert.DeserializeObject<List<Product>>(json);
+            _notificationService = notificationService;
         }
         public override Task<OrderResponse> PlaceOrder(MultiProductOrderRequest request, ServerCallContext context)
         {
@@ -30,6 +32,15 @@ namespace GrpcService.Services
                 }
 
             }
+
+            //Send Notification to RabbitMQ 
+            var notificationRequest = new OrderNotificationRequest
+            {
+                Message = "Order Placed Successfully",
+                Total = totalPrice,
+            };
+            var notificationResponse = _notificationService.NotifyOrderCreated(notificationRequest, context);
+
             OrderResponse response = new OrderResponse();
             response.TotalPrice = totalPrice;
             response.Message = "Order Placed Successfully";
@@ -58,6 +69,13 @@ namespace GrpcService.Services
                 }
             }
             SaveProductsToFile();
+
+            //Send Notification to RabbitMQ 
+            var notificationRequest = new OrderNotificationRequest
+            {
+                Message = "Order Updated Successfully",
+            };
+            var notificationResponse = _notificationService.NotifyOrderUpdated(notificationRequest, context);
 
             return Task.FromResult(new OrderResponse { Message = "Orders updated successfully" });
         }

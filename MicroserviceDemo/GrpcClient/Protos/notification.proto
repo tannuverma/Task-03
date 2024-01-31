@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package notification;
+
+service NotificationService {
+    rpc NotifyOrderCreated(OrderNotificationRequest) returns (OrderNotificationResponse);
+    rpc NotifyOrderUpdated(OrderNotificationRequest) returns (OrderNotificationResponse);
+}
+
+message OrderNotificationRequest {
+    string message = 1;
+    double total = 2;
+}
+
+message OrderNotificationResponse {
+    string status = 1;
+}

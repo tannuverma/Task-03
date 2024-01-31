@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3ABpFdZdJhJ+tmn+r12gXPK8dgmQ6aS3iAC1fEIkTKFf9lV2+fwKY7yYhbwQAm4Dz+uSazJTuuoscLpvR0HySQ==",
+  "dgSpecHash": "9tG+IYqijyLzSC9q0P02NhBZEgF167IvwDXofFLg4yt4Yka5gf8M7hqzPLWDFFJa5BqFzPlV7jAAPrbzn/UiwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\swatantratiwari\\OneDrive - Nagarro\\Desktop\\Task-3(MicroserviceDemo)\\Task-03\\MicroserviceDemo\\GrpcService\\GrpcService.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,9 @@
     "C:\\Users\\swatantratiwari\\.nuget\\packages\\microsoft.extensions.options\\3.0.3\\microsoft.extensions.options.3.0.3.nupkg.sha512",
     "C:\\Users\\swatantratiwari\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.3\\microsoft.extensions.primitives.3.0.3.nupkg.sha512",
     "C:\\Users\\swatantratiwari\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\swatantratiwari\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\swatantratiwari\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
+    "C:\\Users\\swatantratiwari\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\swatantratiwari\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

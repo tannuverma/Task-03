@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Buffers.Text;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using System.Threading.Tasks;
 using Grpc.Core;
 using Grpc.Net.Client;
 using GrpcService;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 
 namespace GrpcClient
 {
@@ -11,129 +15,38 @@ namespace GrpcClient
     {
         static async Task Main(string[] args)
         {
-            var channel = GrpcChannel.ForAddress("http://localhost:5000");
+            const string RabbitMQConnectionString = "amqp://demouser:demo123@localhost:5672/DemoApp";
+            var factory = new ConnectionFactory { Uri = new Uri(RabbitMQConnectionString) };
+
+            using var channel = GrpcChannel.ForAddress("https://localhost:7041");
             var client = new OrderService.OrderServiceClient(channel);
 
             while (true)
             {
                 try
                 {
-                    // Call the GetProductList method async
-                    var productListRequest = new Empty();
-                    var productListResponse = await client.GetProductListAsync(productListRequest);
-                    foreach (var product in productListResponse.Products)
-                    {
-                        Console.WriteLine($"Product ID: {product.ProductId}");
-                        Console.WriteLine($"Product Name: {product.ProductName}");
-                        Console.WriteLine($"Description: {product.Description}");
-                        Console.WriteLine($"Price: {product.Price}");
-                        Console.WriteLine($"Manufacturer: {product.Manufacturer}");
-                        Console.WriteLine($"Available Quantity: {product.Quantity}");
-                        Console.WriteLine();
-                    }
+                    var productListResponse = await client.GetProductListAsync(new Empty());
+                    DisplayProductList(productListResponse.Products);
 
                     Console.WriteLine("Select an option:");
-                    Console.WriteLine();
-                    Console.WriteLine("1. Want to buy some electronic items? ");
-                    Console.WriteLine("2. Not interested! ");
-                    Console.WriteLine();
-
+                    Console.WriteLine("1. Want to buy some electronic items?");
+                    Console.WriteLine("2. Not interested!");
                     Console.Write("Enter your choice: ");
-                    int choice = int.Parse(Console.ReadLine());
+                    int choice;
+                    if (!int.TryParse(Console.ReadLine(), out choice))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a number.");
+                        continue;
+                    }
 
                     switch (choice)
                     {
                         case 1:
-                            try
-                            {
-                                var productSelections = new List<ProductSelection>();
-                                var productUpdates = new List<ProductUpdate>();
-
-                                while (true)
-                                {
-                                    Console.Write("Enter the Id and Quantity of the item(comma-separated): ");
-                                    string input = Console.ReadLine();
-
-                                    if (string.IsNullOrWhiteSpace(input))
-                                        break;
-
-                                    // Splitting of id and quantity
-                                    string[] parts = input.Split(',');
-                                    if (parts.Length == 2 && int.TryParse(parts[0], out int itemId) && int.TryParse(parts[1], out int quantity))
-                                    {
-
-                                        if (productSelections.Any(p => p.ProductId == itemId))
-                                        {
-                                            Console.WriteLine("Item already added. Please enter a different itemId.");
-                                            continue;  // Restart the loop
-                                        }
-
-                                        Product selectedProduct = productListResponse.Products.FirstOrDefault(p => p.ProductId == itemId);
-
-                                        if (selectedProduct != null && selectedProduct.Quantity >= quantity)
-                                        {
-                                            productSelections.Add(new ProductSelection { ProductId = itemId, Quantity = quantity });
-                                            productUpdates.Add(new ProductUpdate { ProductId = itemId, Quantity = quantity });
-                                        }
-                                        else
-                                        {
-                                            Console.WriteLine(selectedProduct != null ? "Insufficient Stock!" : "Product doesn't exist!");
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Invalid input.");
-                                    }
-
-                                    // Check if the user wants to stop adding products
-                                    Console.Write("Do you want to add any other product? ");
-                                    string moreInputs = Console.ReadLine();
-
-                                    if (!(moreInputs.Trim().ToLower() == "y" || moreInputs.Trim().ToLower() == "yes" || moreInputs.Trim().ToLower().StartsWith("y")))
-                                    {
-                                        Console.Write("Do you want to place an order? ");
-                                        string reply = Console.ReadLine();
-                                        if (!(reply.Trim().ToLower() == "y" || reply.Trim().ToLower() == "yes" || reply.Trim().ToLower().StartsWith("y")))
-                                        {
-                                            Console.Write("Do you want to add more products? ");
-                                            string moreInputss = Console.ReadLine();
-                                        }
-                                        else
-                                            break;
-                                    }
-                                }
-                                Console.WriteLine();
-
-                                // Call the PlaceOrder method async with dynamic product selections
-                                var placeorderrequest = new MultiProductOrderRequest
-                                {
-                                    ProductSelections = { productSelections }
-                                };
-
-                                var placeorderresponse = await client.PlaceOrderAsync(placeorderrequest);
-                                Console.WriteLine($"Your Total Price is: {placeorderresponse.TotalPrice}");
-                                Console.WriteLine($"placeorder response: {placeorderresponse.Message}");
-
-                                // Call the UpdateOrder method async with dynamic product selections
-                                var updateOrderRequest = new MultiProductUpdateRequest
-                                {
-                                    ProductUpdates = { productUpdates }
-                                };
-
-                                var updateOrderResponse = await client.UpdateOrderAsync(updateOrderRequest);
-                                Console.WriteLine($"UpdateOrder Response: {updateOrderResponse.Message}");
-
-
-                            }
-                            catch (FormatException)
-                            {
-                                Console.WriteLine("Id and quantity must be an integer");
-                            }
+                            await ProcessOrder(client, productListResponse.Products, factory);
                             break;
                         case 2:
                             Console.WriteLine("Exit");
-                            Environment.Exit(0);
-                            break;
+                            return;
                         default:
                             Console.WriteLine("Invalid choice.");
                             break;
@@ -141,16 +54,110 @@ namespace GrpcClient
                     }
 
                 }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Input must be either 1 or 2.");
-                }
                 catch (RpcException ex)
                 {
                     Console.WriteLine($"Error: {ex.Status}");
                 }
-                Console.ReadKey();
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"An error occurred: {ex.Message}");
+                }
+                //Console.ReadKey();
             }
+        }
+
+        static void DisplayProductList(IEnumerable<Product> products)
+        {
+            foreach (var product in products)
+            {
+                Console.WriteLine($"Product ID: {product.ProductId}");
+                Console.WriteLine($"Product Name: {product.ProductName}");
+                Console.WriteLine($"Description: {product.Description}");
+                Console.WriteLine($"Price: {product.Price}");
+                Console.WriteLine($"Manufacturer: {product.Manufacturer}");
+                Console.WriteLine($"Available Quantity: {product.Quantity}");
+                Console.WriteLine();
+            }
+        }
+
+        static async Task ProcessOrder(OrderService.OrderServiceClient client, IEnumerable<Product> products, ConnectionFactory factory)
+        {
+            var productSelections = new List<ProductSelection>();
+            var productUpdates = new List<ProductUpdate>();
+
+            while (true)
+            {
+                Console.Write("Enter the ID and Quantity of the item (comma-separated): ");
+                string input = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(input))
+                    break;
+
+                string[] parts = input.Split(',');
+                if (parts.Length != 2 || !int.TryParse(parts[0], out int itemId) || !int.TryParse(parts[1], out int quantity))
+                {
+                    Console.WriteLine("Invalid input.");
+                    continue;
+                }
+
+                if (productSelections.Any(p => p.ProductId == itemId))
+                {
+                    Console.WriteLine("Item already added. Please enter a different itemId.");
+                    continue;  // Restart the loop
+                }
+
+                var selectedProduct = products.FirstOrDefault(p => p.ProductId == itemId);
+                if (selectedProduct == null)
+                {
+                    Console.WriteLine("Product not found.");
+                    continue;
+                }
+
+                if (selectedProduct.Quantity < quantity)
+                {
+                    Console.WriteLine("Insufficient stock.");
+                    continue;
+                }
+
+                productSelections.Add(new ProductSelection { ProductId = itemId, Quantity = quantity });
+                productUpdates.Add(new ProductUpdate { ProductId = itemId, Quantity = quantity });
+
+                Console.Write("Do you want to add any other product? (Y/N): ");
+                if (!Console.ReadLine().Trim().Equals("Y", StringComparison.OrdinalIgnoreCase))
+                    break;
+            }
+
+            var placeOrderRequest = new MultiProductOrderRequest { ProductSelections = { productSelections } };
+            var placeOrderResponse = await client.PlaceOrderAsync(placeOrderRequest);
+            Console.WriteLine($"Place order response: {placeOrderResponse.Message}");
+
+            var updateOrderRequest = new MultiProductUpdateRequest { ProductUpdates = { productUpdates } };
+            var updateOrderResponse = await client.UpdateOrderAsync(updateOrderRequest);
+            Console.WriteLine($"Update order response: {updateOrderResponse.Message}");
+
+            Console.WriteLine();
+            Console.WriteLine();
+            ListenToQueue(factory, "Queue1");
+            ListenToQueue(factory, "Queue2");
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+        }
+
+        static void ListenToQueue(ConnectionFactory factory, string queueName)
+        {
+            using var connection = factory.CreateConnection();
+            using var channelRabbitMQ = connection.CreateModel();
+            channelRabbitMQ.BasicQos(0, 1, false);
+            var consumer = new EventingBasicConsumer(channelRabbitMQ);
+            consumer.Received += (model, ea) =>
+            {
+                var body = ea.Body.ToArray();
+                var message = Encoding.UTF8.GetString(body);
+                Console.WriteLine(message);
+            };
+            channelRabbitMQ.BasicConsume(queueName, true, consumer);
         }
     }
 }

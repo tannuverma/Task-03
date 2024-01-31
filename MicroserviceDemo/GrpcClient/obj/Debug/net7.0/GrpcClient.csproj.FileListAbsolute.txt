@@ -19,3 +19,4 @@ C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Tas
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcClient\obj\Debug\net7.0\GrpcClient.pdb
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcClient\obj\Debug\net7.0\GrpcClient.genruntimeconfig.cache
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcClient\obj\Debug\net7.0\ref\GrpcClient.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\Task-3(MicroserviceDemo)\Task-03\MicroserviceDemo\GrpcClient\bin\Debug\net7.0\RabbitMQ.Client.dll
