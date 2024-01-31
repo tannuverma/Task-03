@@ -129,6 +129,8 @@ namespace GrpcClient
 
             var placeOrderRequest = new MultiProductOrderRequest { ProductSelections = { productSelections } };
             var placeOrderResponse = await client.PlaceOrderAsync(placeOrderRequest);
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine($"Place order response: {placeOrderResponse.Message}");
 
             var updateOrderRequest = new MultiProductUpdateRequest { ProductUpdates = { productUpdates } };
@@ -138,10 +140,15 @@ namespace GrpcClient
             Console.WriteLine();
             Console.WriteLine();
             ListenToQueue(factory, "Queue1");
-            ListenToQueue(factory, "Queue2");
+            ListenToQueue(factory, "Queue1");
             Console.WriteLine();
             Console.WriteLine();
 
+            Console.Write("Do you want to see the list of product bought till date? (Y/N): ");
+            if (Console.ReadLine().Trim().Equals("Y", StringComparison.OrdinalIgnoreCase))
+            {
+                ListenToQueue2(factory, "Queue2");
+            }
 
         }
 
@@ -158,6 +165,43 @@ namespace GrpcClient
                 Console.WriteLine(message);
             };
             channelRabbitMQ.BasicConsume(queueName, true, consumer);
+        }
+
+        static void ListenToQueue2(ConnectionFactory factory, string queueName)
+        {
+            using var connection = factory.CreateConnection();
+            using var channelRabbitMQ = connection.CreateModel();
+            channelRabbitMQ.BasicQos(0, 1, false);
+
+            var consumer = new EventingBasicConsumer(channelRabbitMQ);
+
+            consumer.Received += (model, ea) =>
+            {
+                var body = ea.Body.ToArray();
+                var message = Encoding.UTF8.GetString(body);
+                Console.WriteLine(message);
+
+                // Acknowledge the message
+                channelRabbitMQ.BasicAck(ea.DeliveryTag, false);
+            };
+
+            channelRabbitMQ.BasicConsume(queueName, false, consumer);
+
+            while (true)
+            {
+                Thread.Sleep(1000);
+
+                var messageCount = GetMessageCount(channelRabbitMQ, queueName);
+
+                if (messageCount == 0)
+                    break;
+            }
+        }
+
+        static uint GetMessageCount(IModel channel, string queueName)
+        {
+            var declareOk = channel.QueueDeclarePassive(queueName);
+            return declareOk.MessageCount;
         }
     }
 }

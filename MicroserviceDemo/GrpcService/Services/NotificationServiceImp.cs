@@ -19,6 +19,11 @@ namespace GrpcService.Services
             _connectionFactory.DispatchConsumersAsync = true;
             _rabbitMqConnection = _connectionFactory.CreateConnection("DemoAppClient");
             _channel = _rabbitMqConnection.CreateModel();
+            _channel.ExchangeDeclare("CustomerNotification", ExchangeType.Fanout, true, false);
+            _channel.QueueDeclare("Queue1", true, false, false);
+            _channel.QueueBind("Queue1", "CustomerNotification", "queue1");
+            _channel.QueueDeclare("Queue2", true, false, false);
+            _channel.QueueBind("Queue2", "CustomerNotification", "queue2");
         }
 
         public override Task<OrderNotificationResponse> NotifyOrderCreated(OrderNotificationRequest request, ServerCallContext context)
@@ -27,9 +32,9 @@ namespace GrpcService.Services
             {
                 var message = $"{request.Message}. Total Price: {request.Total}";
 
-                _channel.ExchangeDeclare("CustomerNotification", ExchangeType.Direct, true, false);
-                _channel.QueueDeclare("Queue1", true, false, false);
-                _channel.QueueBind("Queue1", "CustomerNotification", "queue1");
+                //_channel.ExchangeDeclare("CustomerNotification", ExchangeType.Direct, true, false);
+                //_channel.QueueDeclare("Queue1", true, false, false);
+                //_channel.QueueBind("Queue1", "CustomerNotification", "queue1");
 
                 var properties = _channel.CreateBasicProperties();
                 properties.DeliveryMode = 2;
@@ -59,8 +64,8 @@ namespace GrpcService.Services
             {
                 var message = $"{request.Message}";
 
-                _channel.QueueDeclare("Queue2", true, false, false);
-                _channel.QueueBind("Queue2", "CustomerNotification", "queue2");
+                //_channel.QueueDeclare("Queue2", true, false, false);
+                //_channel.QueueBind("Queue2", "CustomerNotification", "queue2");
 
                 var properties = _channel.CreateBasicProperties();
                 properties.DeliveryMode = 2;
